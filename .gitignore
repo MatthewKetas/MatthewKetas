@@ -16,3 +16,24 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# Jetbrains IDEs
+.idea
+
+# General safe ignores
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.env
+.env.local
+.DS_Store
+*.log
+playwright-report/
+test-results/
+
+# Codex configuration and skills
+.codex
+/skills-lock.json
+.agents/
