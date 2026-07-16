@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Matthew Ketas is a computer engineering student building reliable systems across hardware, software, and test automation."
+    />
+    <meta name="theme-color" content="#11130f" />
+    <title>Matthew Ketas | Computer Engineer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Matthew Ketas, home">
+        <span class="wordmark-mark" aria-hidden="true">MK</span>
+        <span>Matthew Ketas</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Let&rsquo;s talk</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Computer engineering &middot; Pittsburgh, PA</p>
+          <h1 id="hero-title">Reliable software for real systems.</h1>
+          <p class="hero-intro">
+            I&rsquo;m Matthew Ketas, a computer engineering student at the University of Pittsburgh. I work
+            across embedded systems, automation, software reliability, and hardware&ndash;software integration.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              Explore selected work
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h12m-5-5 5 5-5 5" /></svg>
+            </a>
+            <a class="button button-secondary" href="#experience">View experience</a>
+          </div>
+        </div>
+
+        <div class="system-visual" role="img" aria-label="Diagram showing a dependable path from physical hardware through software to a verified outcome">
+          <div class="visual-topline">
+            <span>System path</span>
+            <span class="mono">MK-001 / ACTIVE</span>
+          </div>
+          <svg class="signal-diagram" viewBox="0 0 640 470" aria-hidden="true">
+            <defs>
+              <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M32 0H0V32" fill="none" stroke="currentColor" stroke-opacity=".12" />
+              </pattern>
+              <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <path d="M0 0L9 3 0 6Z" fill="currentColor" />
+              </marker>
+            </defs>
+            <rect width="640" height="470" fill="url(#grid)" />
+            <path class="signal-path" d="M50 315H145V118H255V225H365V90H480V260H590" marker-end="url(#arrow)" />
+            <g class="node" transform="translate(50 282)">
+              <rect width="145" height="66" rx="4" />
+              <text x="16" y="26">PHYSICAL</text><text x="16" y="46">SYSTEM</text>
+            </g>
+            <g class="node" transform="translate(236 192)">
+              <rect width="145" height="66" rx="4" />
+              <text x="16" y="26">DEVICE +</text><text x="16" y="46">INTERFACE</text>
+            </g>
+            <g class="node" transform="translate(346 57)">
+              <rect width="145" height="66" rx="4" />
+              <text x="16" y="26">RELIABLE</text><text x="16" y="46">SOFTWARE</text>
+            </g>
+            <g class="node node-accent" transform="translate(456 227)">
+              <rect width="145" height="66" rx="4" />
+              <text x="16" y="26">VERIFIED</text><text x="16" y="46">OUTCOME</text>
+            </g>
+            <circle class="signal-pulse" cx="50" cy="315" r="7" />
+            <text class="measure" x="50" y="390">INPUT</text>
+            <text class="measure" x="546" y="390">RESULT</text>
+            <path class="measure-line" d="M50 370H590" />
+          </svg>
+          <div class="visual-legend">
+            <span><i></i> Hardware boundary</span>
+            <span><i></i> Test boundary</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="stack-marquee" aria-label="Engineering areas">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>Embedded systems</span><i></i><span>Motion control</span><i></i><span>Test automation</span><i></i>
+            <span>Systems software</span><i></i><span>Hardware integration</span><i></i><span>Developer tools</span><i></i>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span>Embedded systems</span><i></i><span>Motion control</span><i></i><span>Test automation</span><i></i>
+            <span>Systems software</span><i></i><span>Hardware integration</span><i></i><span>Developer tools</span><i></i>
+          </div>
+        </div>
+      </div>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected systems</p>
+            <h2 id="work-title">Engineering work, explained in context.</h2>
+          </div>
+          <p>
+            Each project is framed around the problem, the system around it, and how the result was verified&mdash;not
+            just a list of tools.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-primary">
+            <div class="project-card-top">
+              <span class="project-type">Distributed system</span>
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-diagram train-diagram" aria-hidden="true">
+              <span>Track</span><b></b><span>Wayside</span><b></b><span>Train</span><b></b><span>Control</span>
+            </div>
+            <div class="project-copy">
+              <h3>Train-Control System</h3>
+              <p>
+                An academic, multi-module system for reasoning about train state, track state, commanded speed,
+                authority, and safety-related behavior.
+              </p>
+              <ul class="tech-list" aria-label="Technical focus">
+                <li>System architecture</li><li>Databases</li><li>Simulation</li><li>Testing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card project-card-dark">
+            <div class="project-card-top">
+              <span class="project-type">Low-level systems</span>
+              <span class="project-index">02</span>
+            </div>
+            <div class="pin-field" aria-hidden="true">
+              <span>3V3</span><span>GPIO</span><span>CLK</span><span>DATA</span><span>GND</span><span>IRQ</span>
+            </div>
+            <div class="project-copy">
+              <h3>Embedded Systems Work</h3>
+              <p>
+                Raspberry Pi and embedded Linux work exploring GPIO, memory-mapped hardware, timing, scheduling,
+                and device-level debugging.
+              </p>
+              <ul class="tech-list" aria-label="Technical focus">
+                <li>C / C++</li><li>GPIO</li><li>Embedded Linux</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card project-card-blueprint">
+            <div class="project-card-top">
+              <span class="project-type">Communication</span>
+              <span class="project-index">03</span>
+            </div>
+            <svg class="waveform" viewBox="0 0 500 130" aria-hidden="true">
+              <path d="M0 78h35l20-42 35 80 35-80 35 80 35-80 35 80 35-80 35 80 35-80 35 80 20-38h55" />
+              <path class="waveform-faint" d="M0 104h70V55h70v49h70V55h70v49h70V55h70v49h70" />
+            </svg>
+            <div class="project-copy">
+              <h3>Networks &amp; Communication</h3>
+              <p>
+                Protocol and communication projects focused on how data moves, how errors are detected, and how
+                performance changes under real constraints.
+              </p>
+              <ul class="tech-list" aria-label="Technical focus">
+                <li>TCP / UDP</li><li>Error detection</li><li>Analysis</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card project-card-lines">
+            <div class="project-card-top">
+              <span class="project-type">Reliability</span>
+              <span class="project-index">04</span>
+            </div>
+            <div class="test-sequence" aria-hidden="true">
+              <span class="complete">Setup</span><i></i><span class="complete">Exercise</span><i></i><span>Verify</span>
+            </div>
+            <div class="project-copy">
+              <h3>Test Automation</h3>
+              <p>
+                Browser and engineering test work centered on reusable test architecture, clearer failures, and
+                dependable verification.
+              </p>
+              <ul class="tech-list" aria-label="Technical focus">
+                <li>Playwright</li><li>Selenium</li><li>CI</li><li>Debugging</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section approach-section" id="about" aria-labelledby="approach-title">
+        <p class="sr-only">
+          I like engineering problems where software has to understand the physical system around it. The work is
+          not finished when the code compiles. It is finished when the system behaves predictably, failures are
+          understandable, and the result is useful to the people operating it.
+        </p>
+        <p class="approach-statement" id="approach-title" aria-hidden="true">
+          I like engineering problems where software has to understand the physical system around it. The work is
+          not finished when the code compiles. It is finished when the system behaves predictably, failures are
+          understandable, and the result is useful to the people operating it.
+        </p>
+      </section>
+
+      <section class="section project-accordions" aria-labelledby="focus-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">How I work</p>
+            <h2 id="focus-title">From boundary to behavior.</h2>
+          </div>
+        </div>
+        <div class="accordion-row">
+          <details name="engineering-focus" open>
+            <summary><span>01</span> Understand the system</summary>
+            <p>Start with interfaces, constraints, timing, failure modes, and the people who operate the system.</p>
+          </details>
+          <details name="engineering-focus">
+            <summary><span>02</span> Build the path</summary>
+            <p>Choose clear component boundaries, implement the smallest dependable flow, and make state observable.</p>
+          </details>
+          <details name="engineering-focus">
+            <summary><span>03</span> Verify the behavior</summary>
+            <p>Test at the right boundaries, investigate evidence when something fails, and document what was learned.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Professional evidence</p>
+            <h2 id="experience-title">Software shaped by real constraints.</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Experience carousel controls">
+            <button class="carousel-button" type="button" data-direction="previous" aria-label="Previous experience">
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M16 10H4m5 5-5-5 5-5" /></svg>
+            </button>
+            <button class="carousel-button" type="button" data-direction="next" aria-label="Next experience">
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h12m-5-5 5 5-5 5" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="experience-viewport" aria-live="polite">
+          <div class="experience-track">
+            <article class="experience-card">
+              <div class="experience-company">Aerotech</div>
+              <h3>Precision motion-control software</h3>
+              <p>
+                Professional engineering work in a hardware-adjacent environment, including desktop software,
+                technical user interfaces, validation, and motion-control workflows.
+              </p>
+              <div class="experience-meta"><span>C# / C++</span><span>.NET / XAML</span><span>Hardware validation</span></div>
+            </article>
+            <article class="experience-card">
+              <div class="experience-company">OwnBackup</div>
+              <h3>Test infrastructure &amp; reliability</h3>
+              <p>
+                Software quality work focused on browser automation, reusable test architecture, and making test
+                failures faster to understand and act on.
+              </p>
+              <div class="experience-meta"><span>Playwright</span><span>Selenium</span><span>Automation</span></div>
+            </article>
+            <article class="experience-card">
+              <div class="experience-company">University of Pittsburgh</div>
+              <h3>Computer engineering in context</h3>
+              <p>
+                Coursework and team projects spanning embedded devices, operating systems, networking, databases,
+                communications, and complete software systems.
+              </p>
+              <div class="experience-meta"><span>Computer engineering</span><span>Systems</span><span>Team design</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section layer-section" aria-labelledby="layers-title">
+        <div class="layers-intro">
+          <p class="eyebrow">Technical range</p>
+          <h2 id="layers-title">Comfortable across the stack. Grounded close to the system.</h2>
+          <p>
+            The interesting work often happens at the boundaries&mdash;where state crosses a device interface, a service,
+            a test harness, or a user-facing tool.
+          </p>
+        </div>
+        <ol class="system-layers">
+          <li><span>06</span><strong>User interface</strong><small>Desktop &middot; Web &middot; Engineering tools</small></li>
+          <li><span>05</span><strong>Application logic</strong><small>C# &middot; Python &middot; TypeScript</small></li>
+          <li><span>04</span><strong>Services &amp; data</strong><small>Networking &middot; Databases &middot; APIs</small></li>
+          <li><span>03</span><strong>Operating system</strong><small>Linux &middot; Scheduling &middot; Processes</small></li>
+          <li><span>02</span><strong>Embedded device</strong><small>C++ &middot; GPIO &middot; Device interfaces</small></li>
+          <li><span>01</span><strong>Physical system</strong><small>Motion &middot; Timing &middot; Real constraints</small></li>
+        </ol>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Build something dependable</p>
+          <h2 id="contact-title">Looking for an engineer who thinks in systems?</h2>
+          <p>
+            I&rsquo;m interested in embedded systems, systems software, automation, and software engineering roles where
+            reliability and technical depth matter.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="https://github.com/MatthewKetas">View GitHub profile</a>
+          <p>Email, LinkedIn, and resume links will be added after Matthew approves the public contact details.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="#top"><span class="wordmark-mark" aria-hidden="true">MK</span><span>Matthew Ketas</span></a>
+      <p>Computer engineer &middot; Pittsburgh, Pennsylvania</p>
+      <p>&copy; <span id="current-year">2026</span> Matthew Ketas</p>
+    </footer>
+  </body>
+</html>
