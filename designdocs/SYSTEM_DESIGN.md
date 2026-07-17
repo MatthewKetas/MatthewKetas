@@ -1183,3 +1183,15 @@ The completed website should make an employer think:
 > Matthew understands complete systems, works comfortably across hardware and software boundaries, cares about reliability, and can explain technical work clearly.
 
 The portfolio should be visually polished, but its strongest feature should be the quality and credibility of the engineering work it presents.
+
+## Engineer Feedback 1:
+1. The site colors need to change - the blue and yellows used here should be highlighting colors across a dark theme - I like the black and yellow, but we want to swap it for black with the blue and yellow accents - black and yellow is something not unique to Pittsburgh.
+2. The site is too focused on my quotes rather than being a place to display my projects - get rid of the quote parts of this website and redesign it so that we can show off my AutoDesk Fusion360 projects, my PCB projects, and my code projects, and my overall system projects.
+3. Use my resume to get some ideas of the projects that I have done and tailor the site more towards me. You can also use it for my email phone number and other credentials that we might have - here is my linkedin profile (https://www.linkedin.com/in/matthew-ketas-75849a250/)
+4. The train project should be kept at a MINIMUM - that is one we will include but I have done better things like the SaveIt.
+5. The site reads largely as generic - while it is well built it could be better and more personalized towards me. Using my linkedin and my resume - this can be tailored closer to me. 
+
+## Engineer Feedback 2:
+1. We need better than the Hardware Firmware tag line on the front page.
+2. The projects section needs to be redone because the image is not great and the organization feels cluttered.
+3. I like the colors but the website style needs an upgrade.

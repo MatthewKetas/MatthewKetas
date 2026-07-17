@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="cad-title cad-desc">
+  <title id="cad-title">CAD enclosure sketch and PCB layout diagram</title>
+  <desc id="cad-desc">Placeholder technical diagram: a dimensioned enclosure sketch alongside a simplified PCB outline with component pads.</desc>
+  <defs>
+    <pattern id="cad-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#12253f" stroke-opacity=".08" />
+    </pattern>
+  </defs>
+  <rect width="640" height="420" fill="#e8eef5" />
+  <rect width="640" height="420" fill="url(#cad-grid)" />
+  <rect x="0.5" y="0.5" width="639" height="419" fill="none" stroke="#12253f" stroke-opacity=".25" />
+
+  <text x="24" y="34" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing=".05em" fill="#12253f" fill-opacity=".7">FIG. 06 &#8212; ENCLOSURE + PCB</text>
+
+  <line x1="320" y1="60" x2="320" y2="360" stroke="#12253f" stroke-opacity=".2" stroke-dasharray="3 5" />
+
+  <g stroke="#12253f" stroke-width="1.4" fill="none">
+    <path d="m70 150 110-30 130 46-110 30Z" />
+    <path d="m70 150v92l130 52 110-46v-90M258 196v92M118 172v90m38-100v88m124-42v88m-36-102v88" />
+    <circle cx="234" cy="164" r="16" /><path d="M226 164h16M234 156v16" />
+  </g>
+  <g stroke="#8e7928" stroke-width="1.2" stroke-dasharray="3 4">
+    <path d="M70 268h130M70 262v12m130-12v12" />
+  </g>
+  <text x="100" y="300" font-family="'JetBrains Mono', monospace" font-size="10" fill="#12253f" fill-opacity=".55">ENCLOSURE &#8212; FUSION 360</text>
+
+  <g stroke="#12253f" stroke-opacity=".4" stroke-width="1">
+    <line x1="70" y1="322" x2="290" y2="322" />
+    <line x1="70" y1="316" x2="70" y2="328" />
+    <line x1="290" y1="316" x2="290" y2="328" />
+  </g>
+  <text x="180" y="312" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing=".04em" fill="#12253f" fill-opacity=".45">FOOTPRINT</text>
+
+  <g transform="translate(370 110)" font-family="'JetBrains Mono', monospace" font-size="10">
+    <rect width="230" height="150" fill="none" stroke="#2f73ff" stroke-width="1.6" />
+    <rect x="14" y="14" width="30" height="30" fill="none" stroke="#12253f" stroke-width="1.2" />
+    <circle cx="29" cy="29" r="3" fill="#12253f" />
+    <circle cx="200" cy="20" r="10" fill="none" stroke="#12253f" stroke-width="1.2" />
+    <rect x="70" y="20" width="80" height="18" fill="none" stroke="#12253f" stroke-width="1" />
+    <rect x="30" y="80" width="60" height="40" fill="none" stroke="#12253f" stroke-width="1" />
+    <rect x="120" y="80" width="90" height="40" fill="none" stroke="#12253f" stroke-width="1" />
+    <g fill="#12253f" fill-opacity=".55">
+      <circle cx="30" cy="80" r="2" /><circle cx="90" cy="80" r="2" /><circle cx="30" cy="120" r="2" /><circle cx="90" cy="120" r="2" />
+      <circle cx="120" cy="80" r="2" /><circle cx="210" cy="80" r="2" /><circle cx="120" cy="120" r="2" /><circle cx="210" cy="120" r="2" />
+    </g>
+    <text x="14" y="145" fill="#1646a8">PCB &#8212; ALTIUM</text>
+  </g>
+
+  <text x="616" y="400" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing=".03em" fill="#8e7928">PLACEHOLDER &#8212; REPLACE IN assets/projects/cad-pcb/</text>
+</svg>

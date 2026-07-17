@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="hs-title hs-desc">
+  <title id="hs-title">HearSmart signal path diagram</title>
+  <desc id="hs-desc">Placeholder technical diagram showing signal flow from EEG hardware through the PYGDS acquisition pipeline to the audio-focus algorithm.</desc>
+  <defs>
+    <pattern id="hs-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#12253f" stroke-opacity=".08" />
+    </pattern>
+    <marker id="hs-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 8 4 0 8Z" fill="#12253f" />
+    </marker>
+  </defs>
+  <rect width="640" height="420" fill="#e8eef5" />
+  <rect width="640" height="420" fill="url(#hs-grid)" />
+  <rect x="0.5" y="0.5" width="639" height="419" fill="none" stroke="#12253f" stroke-opacity=".25" />
+
+  <text x="24" y="34" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing=".05em" fill="#12253f" fill-opacity=".7">FIG. 02 &#8212; SIGNAL PATH</text>
+  <text x="616" y="34" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing=".04em" fill="#12253f" fill-opacity=".5">EEG &#8594; FOCUSED AUDIO</text>
+
+  <line x1="60" y1="140" x2="580" y2="140" stroke="#12253f" stroke-opacity=".2" stroke-width="1" stroke-dasharray="1 4" />
+  <path
+    d="M60 140 L75 112 L90 158 L105 118 L120 152 L135 114 Q160 156 185 132 Q212 110 240 138 Q270 158 300 134 Q335 118 370 138 Q410 152 445 136 Q485 126 520 140 Q550 150 580 140"
+    fill="none"
+    stroke="#2f73ff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <g font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing=".04em" fill="#12253f" fill-opacity=".5">
+    <text x="60" y="98">RAW</text>
+    <text x="300" y="98" text-anchor="middle">FILTERED</text>
+    <text x="580" y="98" text-anchor="end">FOCUSED</text>
+  </g>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing=".04em">
+    <g transform="translate(60 210)">
+      <rect width="150" height="66" fill="none" stroke="#12253f" stroke-width="1.4" />
+      <text x="16" y="28" fill="#12253f" fill-opacity=".55">01</text>
+      <text x="16" y="48" fill="#12253f">EEG HARDWARE</text>
+    </g>
+    <path d="M210 243h58" fill="none" stroke="#12253f" stroke-width="1.4" marker-end="url(#hs-arrow)" />
+    <g transform="translate(268 210)">
+      <rect width="150" height="66" fill="#2f73ff" fill-opacity=".1" stroke="#2f73ff" stroke-width="1.4" />
+      <text x="16" y="28" fill="#1646a8">02</text>
+      <text x="16" y="48" fill="#12253f">PYGDS PIPELINE</text>
+    </g>
+    <path d="M418 243h58" fill="none" stroke="#12253f" stroke-width="1.4" marker-end="url(#hs-arrow)" />
+    <g transform="translate(476 210)">
+      <rect width="104" height="66" fill="none" stroke="#12253f" stroke-width="1.4" />
+      <text x="16" y="28" fill="#12253f" fill-opacity=".55">03</text>
+      <text x="16" y="48" fill="#12253f">AUDIO FOCUS</text>
+    </g>
+  </g>
+
+  <text x="616" y="400" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing=".03em" fill="#8e7928">PLACEHOLDER &#8212; REPLACE IN assets/projects/hearsmart/</text>
+</svg>
