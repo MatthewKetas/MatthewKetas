@@ -25,6 +25,7 @@ node_modules/
 .next/
 dist/
 build/
+out/
 coverage/
 .env
 .env.local
@@ -32,9 +33,18 @@ coverage/
 *.log
 playwright-report/
 test-results/
+screenshots/
+tsconfig.tsbuildinfo
 
 # Codex configuration and skills
 .codex/
 /skills-lock.json
 .agents/
 .claude/
+.impeccable/
+
+# Graphify skill
+graphify-out/
+
+# Private resume working files — never committed (see designdocs/AGENTS.md rule 3)
+personalcredentials/
