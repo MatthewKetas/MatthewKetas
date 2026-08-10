@@ -1,17 +1,38 @@
-# AGENTS.md — Execution Rules for This Repository
+# AGENTS.md
 
-This file records **how** to work on this site. `SYSTEM_DESIGN.md` in this same folder is the source of truth for **why** the site exists, who it's for, and its narrative/positioning — read that first for anything content- or tone-related. This file only pins down execution decisions the design doc leaves open, so future work (by an agent or by Matthew) doesn't quietly drift from decisions that have already been made and confirmed.
+Guidance for AI coding agents working in this repository.
 
-## Fixed decisions — do not re-litigate without asking
+## What this repo is
 
-1. **Color tokens are frozen.** `--black`, `--blue` / `--blue-bright` / `--blue-dark`, `--yellow` / `--yellow-dark` in `styles.css` stay exactly as they are. Two rounds of engineer feedback confirmed this palette is liked. If a change feels tempting, the actual problem is almost certainly composition, spacing, or hierarchy — not hue.
-2. **No new build tooling, framework, or data file** without a concrete, stated reason. This site is intentionally plain static HTML/CSS/JS with zero dependencies beyond CDN fonts and GSAP. At its current size (a handful of HTML pages), a templating layer or static-site generator would trade a real, present simplicity for a hypothetical future convenience — see `CONTRIBUTING.md` for the manual process that replaces it.
-3. **Project detail pages are first-person narrative, never a labeled case-study template.** Do not add headers like "Problem," "System Context," "Technical Decisions," "Verification," "Reflection." Matthew talks through the project himself — what it is, his role, a real decision or tradeoff, something that went wrong and how it was resolved, how it was verified, the outcome — in plain prose. The substance in `SYSTEM_DESIGN.md` §10 should all be present somewhere in the page; it should just never be visible as a section-header taxonomy.
-4. **No invented content.** Every claim on the site must trace back to the resume, an existing repository, or something Matthew has directly said. This includes: no invented metrics, no invented job responsibilities, no invented project scope. Concretely: the CAD/PCB work is framed as **"CAD & PCB Practice"** — a skills-depth page (Autodesk ACA credential + SaveIt's mechanical/PCB scope) — not as a second unrelated flagship system, because the factual record doesn't support a second flagship project in that area.
-5. **The train-control system stays a minimal, unlinked footnote**, exactly as it already is. It is explicitly not being built into a project page.
-6. **Sitewide headline rule.** Every section heading (`<h1>`/`<h2>`) is a plain, direct phrase — not an isolated stylized fragment or something that reads like a quote pulled out of context. Whatever meaning that heading is trying to carry belongs in the subhead beneath it, written as one specific, fact-grounded sentence. This rule was raised once, about the hero, but applies everywhere: it's a pattern, not a one-time fix.
-7. **Image convention.** Every project image lives at `assets/projects/<slug>/cover.svg` (or `.jpg`/`.png` once a real photo/export replaces the placeholder), and every reference to it in HTML is preceded by an HTML comment marker: `<!-- IMAGE:<slug>/cover -->`. This makes every image reference in the codebase discoverable with `grep -rn "IMAGE:" *.html projects/*/index.html`, so swapping a placeholder for a real asset later never requires reading CSS or JS to find where it's used.
+Personal portfolio site for Matthew Ketas (Computer Engineering, University of Pittsburgh). Next.js 15 + TypeScript + Tailwind CSS v4, statically exported (`output: "export"`) and deployed on GitHub Pages. Full architecture and design system: [designdocs/SYSTEM_DESIGN.md](SYSTEM_DESIGN.md).
 
-## Keeping the two docs in sync
+## Commands
 
-If the pattern for adding a page, adding a project card, or adding a project image ever changes, update the matching checklist in `CONTRIBUTING.md` in the same change — that file is what Matthew actually follows day to day, and it must never describe a pattern the codebase has moved away from.
+```bash
+npm run dev        # dev server at http://localhost:3000
+npm run build      # production build (must pass before any PR)
+npm run lint       # ESLint
+npm run typecheck  # tsc --noEmit
+npm run test       # Playwright smoke suite
+```
+
+## Hard rules
+
+1. **Design tokens are law.** All colors, fonts, radii come from the token tables in SYSTEM_DESIGN.md §4, defined as CSS variables in `app/globals.css`. Never introduce ad-hoc hex values or fonts in components.
+2. **Content lives in `content/*.ts` only.** Resume facts (jobs, dates, projects, GPA) are never hardcoded in components. To change site text, edit `content/resume.ts` or `content/site.ts`.
+3. **`personalcredentials/` is the resume working directory.** The only sanctioned copy out of it is the public resume PDF at `public/MatthewKetas-Resume.pdf` (user-approved download). Never paste its contents into components or content files; resume facts flow through `content/resume.ts`. Public contact email is `matt.ketas@gmail.com`.
+4. **No secrets in the repo, no server.** This is a static export with no API routes and no env vars to configure. If you find a committed secret, stop and flag it.
+5. **Accessibility floor:** WCAG AA contrast, visible focus rings, `prefers-reduced-motion` respected on any animation you add. Cyan (`--trace`) is never used as body-text color.
+6. **Server components by default.** Add `"use client"` only for the contact form and motion wrappers.
+
+## Conventions
+
+- Components: one per file in `components/`, PascalCase exports, kebab-case filenames.
+- Shared primitives (button, card, chip, section frame) live in `components/ui/` — reuse before creating new ones.
+- Validation schemas in `lib/`, shared between client and server (Zod).
+- Commit style: see [CONTRIBUTING.md](CONTRIBUTING.md).
+- Match existing Tailwind class ordering and file idiom; avoid inline `style=` except for dynamic SVG values.
+
+## Definition of done
+
+A change is done when `lint`, `typecheck`, `build`, and `test` all pass, the affected UI matches the SYSTEM_DESIGN.md tokens, and mobile (360px) layout is verified.
