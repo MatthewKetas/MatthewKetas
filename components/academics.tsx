@@ -37,14 +37,25 @@ export function Academics() {
             <p className="silkscreen mb-4">International study</p>
             <div className="grid grid-cols-3 gap-3">
               {education.abroad.map((a) => (
-                <div
+                <a
                   key={a.code}
-                  className="rounded-xl border border-line bg-raised px-4 py-3 text-center"
+                  href={a.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Read the study-abroad blog from ${a.place}`}
+                  aria-label={`Read the study-abroad blog from ${a.place} (opens in a new tab)`}
+                  className="group relative rounded-xl border border-line bg-raised px-4 py-3 text-center transition-colors hover:border-trace/40"
                 >
+                  <span
+                    aria-hidden
+                    className="absolute right-2.5 top-2.5 h-1.5 w-1.5 rounded-full border border-trace/35 transition-colors duration-200 group-hover:border-trace-hot group-hover:bg-trace-hot"
+                  />
                   <p className="font-display text-lg font-semibold text-fg">{a.code}</p>
                   <p className="silkscreen mt-1">{a.year}</p>
-                  <p className="mt-1 text-xs text-muted">{a.place}</p>
-                </div>
+                  <p className="mt-1 text-xs text-muted transition-colors group-hover:text-trace-hot">
+                    {a.place}
+                  </p>
+                </a>
               ))}
             </div>
           </Reveal>

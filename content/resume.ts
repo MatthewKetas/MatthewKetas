@@ -16,9 +16,19 @@ export const education = {
     "ECE Project Systems Engineering",
   ],
   abroad: [
-    { code: "KR", place: "South Korea", year: "2024" },
-    { code: "CZ", place: "Czech Republic", year: "2025" },
-    { code: "BR", place: "Brazil", year: "2026" },
+    { code: "KR", place: "South Korea", year: "2024", href: "https://pittplus3.blog/tag/Matthew-Ketas/" },
+    {
+      code: "CZ",
+      place: "Czech Republic",
+      year: "2025",
+      href: "https://swansonglobalengineers.com/?tag=matthew-k%2Bczech-republic",
+    },
+    {
+      code: "BR",
+      place: "Brazil",
+      year: "2026",
+      href: "https://swansonglobalengineers.com/?tag=matthew-k%2Benergy-brazil",
+    },
   ],
 } as const;
 
